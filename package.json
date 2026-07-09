@@ -1,25 +1,55 @@
 {
-  "name": "straight-athlete",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@jcbhmr/go",
+  "version": "1.26.5+1.26.5",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "ready": "vp check && vp run -r test && vp run -r build",
-    "dev": "vp run website#dev",
-    "prepare": "vp config"
+    "generate": "node generate.ts"
+  },
+  "bin": {
+    "go": "go.js",
+    "gofmt": "gofmt.js"
+  },
+  "optionalDependencies": {
+    "@jcbhmr/go-aix-ppc64": "workspace:",
+    "@jcbhmr/go-darwin-arm64": "workspace:",
+    "@jcbhmr/go-darwin-x64": "workspace:",
+    "@jcbhmr/go-freebsd-x64": "workspace:",
+    "@jcbhmr/go-linux-arm": "workspace:",
+    "@jcbhmr/go-linux-arm64": "workspace:",
+    "@jcbhmr/go-linux-ia32": "workspace:",
+    "@jcbhmr/go-linux-loong64": "workspace:",
+    "@jcbhmr/go-linux-ppc64": "workspace:",
+    "@jcbhmr/go-linux-riscv64": "workspace:",
+    "@jcbhmr/go-linux-s390x": "workspace:",
+    "@jcbhmr/go-linux-x64": "workspace:",
+    "@jcbhmr/go-sunos-x64": "workspace:",
+    "@jcbhmr/go-win32-arm64": "workspace:",
+    "@jcbhmr/go-win32-x64": "workspace:"
   },
   "devDependencies": {
-    "vite": "catalog:",
-    "vite-plus": "catalog:"
+    "@types/node": "catalog:",
+    "@types/yauzl": "^3.4.0",
+    "typescript": "catalog:",
+    "yauzl": "^3.4.0"
   },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "11.10.0",
+      "version": ">=11",
+      "onFail": "download"
+    },
+    "runtime": {
+      "name": "node",
+      "version": ">=26",
       "onFail": "download"
     }
   },
   "engines": {
-    "node": ">=22.18.0"
+    "bun": ">=1.3.14",
+    "deno": ">=2.9.2",
+    "node": ">=26"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "name": "@jcbhmr/go-linux-s390x",
+  "version": "1.26.5+1.26.5",
+  "type": "module",
+  "files": [
+    "*"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "os": "linux",
+    "cpu": "s390x"
+  },
+  "scripts": {
+    "build": "node ../../build.ts --goos linux --goarch s390x"
+  }
+}

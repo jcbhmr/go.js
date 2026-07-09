@@ -1,0 +1,16 @@
+{
+  "name": "@jcbhmr/go-darwin-x64",
+  "version": "1.26.5+1.26.5",
+  "type": "module",
+  "files": [
+    "*"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "os": "darwin",
+    "cpu": "x64"
+  },
+  "scripts": {
+    "build": "node ../../build.ts --goos darwin --goarch amd64"
+  }
+}

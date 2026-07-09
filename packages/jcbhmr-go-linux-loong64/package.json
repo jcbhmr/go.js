@@ -1,0 +1,16 @@
+{
+  "name": "@jcbhmr/go-linux-loong64",
+  "version": "1.26.5+1.26.5",
+  "type": "module",
+  "files": [
+    "*"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "os": "linux",
+    "cpu": "loong64"
+  },
+  "scripts": {
+    "build": "node ../../build.ts --goos linux --goarch loong64"
+  }
+}
