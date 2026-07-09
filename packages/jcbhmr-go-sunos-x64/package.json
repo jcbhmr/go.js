@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-sunos-x64",
-  "version": "1.26.6+1.26.5",
+  "version": "1.26.7+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -10,6 +10,8 @@
     "os": "sunos",
     "cpu": "x64",
     "executableFiles": [
+      "./bin/go",
+      "./bin/gofmt",
       "./pkg/tool/solaris_amd64/asm",
       "./pkg/tool/solaris_amd64/cgo",
       "./pkg/tool/solaris_amd64/compile",

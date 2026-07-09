@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-darwin-arm64",
-  "version": "1.26.6+1.26.5",
+  "version": "1.26.7+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -10,6 +10,8 @@
     "os": "darwin",
     "cpu": "arm64",
     "executableFiles": [
+      "./bin/go",
+      "./bin/gofmt",
       "./pkg/tool/darwin_arm64/asm",
       "./pkg/tool/darwin_arm64/cgo",
       "./pkg/tool/darwin_arm64/compile",

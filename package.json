@@ -1,6 +1,10 @@
 {
   "name": "@jcbhmr/go",
-  "version": "1.26.6+1.26.5",
+  "version": "1.26.7+1.26.5",
+  "bin": {
+    "go": "go.js",
+    "gofmt": "gofmt.js"
+  },
   "type": "module",
   "publishConfig": {
     "access": "public"
@@ -8,9 +12,11 @@
   "scripts": {
     "generate": "node generate.ts"
   },
-  "bin": {
-    "go": "go.js",
-    "gofmt": "gofmt.js"
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/yauzl": "^3.4.0",
+    "typescript": "catalog:",
+    "yauzl": "^3.4.0"
   },
   "optionalDependencies": {
     "@jcbhmr/go-aix-ppc64": "workspace:",
@@ -28,12 +34,6 @@
     "@jcbhmr/go-sunos-x64": "workspace:",
     "@jcbhmr/go-win32-arm64": "workspace:",
     "@jcbhmr/go-win32-x64": "workspace:"
-  },
-  "devDependencies": {
-    "@types/node": "catalog:",
-    "@types/yauzl": "^3.4.0",
-    "typescript": "catalog:",
-    "yauzl": "^3.4.0"
   },
   "devEngines": {
     "packageManager": {

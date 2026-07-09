@@ -21,9 +21,9 @@ const table = Object.entries({
   "aix-ppc64": "aix/ppc64",
   "freebsd-x64": "freebsd/amd64",
 }).map(([node, go]) => {
-  const [os, cpu] = node.split("-", 2)
-  const [goos, goarch] = go.split("/", 2)
-  return { os, cpu, goos, goarch }
+  const [os, cpu] = node.split("-", 2);
+  const [goos, goarch] = go.split("/", 2);
+  return { os, cpu, goos, goarch };
 });
 for (const { os, cpu, goos, goarch } of table) {
   const packageRoot = resolve("packages", `jcbhmr-go-${os}-${cpu}`);
@@ -45,15 +45,11 @@ for (const { os, cpu, goos, goarch } of table) {
           os,
           cpu,
           executableFiles: [
-            "asm",
-            "cgo",
-            "compile",
-            "cover",
-            "fix",
-            "link",
-            "preprofile",
-            "vet"
-          ].map(x => `./pkg/tool/${goos}_${goarch}/${x}${os === "win32" ? ".exe" : ""}`)
+            ...["go", "gofmt"].map((x) => `./bin/${x}${os === "win32" ? ".exe" : ""}`),
+            ...["asm", "cgo", "compile", "cover", "fix", "link", "preprofile", "vet"].map(
+              (x) => `./pkg/tool/${goos}_${goarch}/${x}${os === "win32" ? ".exe" : ""}`,
+            ),
+          ],
         },
         scripts: {
           build: `node ../../build.ts --goos ${goos} --goarch ${goarch}`,

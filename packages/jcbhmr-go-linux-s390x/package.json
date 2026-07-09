@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-linux-s390x",
-  "version": "1.26.6+1.26.5",
+  "version": "1.26.7+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -10,6 +10,8 @@
     "os": "linux",
     "cpu": "s390x",
     "executableFiles": [
+      "./bin/go",
+      "./bin/gofmt",
       "./pkg/tool/linux_s390x/asm",
       "./pkg/tool/linux_s390x/cgo",
       "./pkg/tool/linux_s390x/compile",

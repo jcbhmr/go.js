@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-win32-x64",
-  "version": "1.26.6+1.26.5",
+  "version": "1.26.7+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -10,6 +10,8 @@
     "os": "win32",
     "cpu": "x64",
     "executableFiles": [
+      "./bin/go.exe",
+      "./bin/gofmt.exe",
       "./pkg/tool/windows_amd64/asm.exe",
       "./pkg/tool/windows_amd64/cgo.exe",
       "./pkg/tool/windows_amd64/compile.exe",

@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-linux-riscv64",
-  "version": "1.26.6+1.26.5",
+  "version": "1.26.7+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -10,6 +10,8 @@
     "os": "linux",
     "cpu": "riscv64",
     "executableFiles": [
+      "./bin/go",
+      "./bin/gofmt",
       "./pkg/tool/linux_riscv64/asm",
       "./pkg/tool/linux_riscv64/cgo",
       "./pkg/tool/linux_riscv64/compile",

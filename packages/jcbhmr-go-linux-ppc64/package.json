@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-linux-ppc64",
-  "version": "1.26.6+1.26.5",
+  "version": "1.26.7+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -10,6 +10,8 @@
     "os": "linux",
     "cpu": "ppc64",
     "executableFiles": [
+      "./bin/go",
+      "./bin/gofmt",
       "./pkg/tool/linux_ppc64le/asm",
       "./pkg/tool/linux_ppc64le/cgo",
       "./pkg/tool/linux_ppc64le/compile",
