@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-linux-ia32",
-  "version": "1.26.5+1.26.5",
+  "version": "1.26.6+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -8,7 +8,17 @@
   "publishConfig": {
     "access": "public",
     "os": "linux",
-    "cpu": "ia32"
+    "cpu": "ia32",
+    "executableFiles": [
+      "./pkg/tool/linux_386/asm",
+      "./pkg/tool/linux_386/cgo",
+      "./pkg/tool/linux_386/compile",
+      "./pkg/tool/linux_386/cover",
+      "./pkg/tool/linux_386/fix",
+      "./pkg/tool/linux_386/link",
+      "./pkg/tool/linux_386/preprofile",
+      "./pkg/tool/linux_386/vet"
+    ]
   },
   "scripts": {
     "build": "node ../../build.ts --goos linux --goarch 386"

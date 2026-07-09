@@ -27,7 +27,6 @@ const table = Object.entries({
 });
 for (const { os, cpu, goos, goarch } of table) {
   const packageRoot = resolve("packages", `jcbhmr-go-${os}-${cpu}`);
-  await rm(packageRoot, { recursive: true, force: true });
   await mkdir(packageRoot, { recursive: true });
   await writeFile(
     join(packageRoot, ".gitignore"),
@@ -45,6 +44,16 @@ for (const { os, cpu, goos, goarch } of table) {
           access: "public",
           os,
           cpu,
+          executableFiles: [
+            "asm",
+            "cgo",
+            "compile",
+            "cover",
+            "fix",
+            "link",
+            "preprofile",
+            "vet"
+          ].map(x => `./pkg/tool/${goos}_${goarch}/${x}${os === "win32" ? ".exe" : ""}`)
         },
         scripts: {
           build: `node ../../build.ts --goos ${goos} --goarch ${goarch}`,

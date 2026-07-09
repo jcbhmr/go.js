@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-linux-s390x",
-  "version": "1.26.5+1.26.5",
+  "version": "1.26.6+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -8,7 +8,17 @@
   "publishConfig": {
     "access": "public",
     "os": "linux",
-    "cpu": "s390x"
+    "cpu": "s390x",
+    "executableFiles": [
+      "./pkg/tool/linux_s390x/asm",
+      "./pkg/tool/linux_s390x/cgo",
+      "./pkg/tool/linux_s390x/compile",
+      "./pkg/tool/linux_s390x/cover",
+      "./pkg/tool/linux_s390x/fix",
+      "./pkg/tool/linux_s390x/link",
+      "./pkg/tool/linux_s390x/preprofile",
+      "./pkg/tool/linux_s390x/vet"
+    ]
   },
   "scripts": {
     "build": "node ../../build.ts --goos linux --goarch s390x"

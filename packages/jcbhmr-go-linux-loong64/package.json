@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-linux-loong64",
-  "version": "1.26.5+1.26.5",
+  "version": "1.26.6+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -8,7 +8,17 @@
   "publishConfig": {
     "access": "public",
     "os": "linux",
-    "cpu": "loong64"
+    "cpu": "loong64",
+    "executableFiles": [
+      "./pkg/tool/linux_loong64/asm",
+      "./pkg/tool/linux_loong64/cgo",
+      "./pkg/tool/linux_loong64/compile",
+      "./pkg/tool/linux_loong64/cover",
+      "./pkg/tool/linux_loong64/fix",
+      "./pkg/tool/linux_loong64/link",
+      "./pkg/tool/linux_loong64/preprofile",
+      "./pkg/tool/linux_loong64/vet"
+    ]
   },
   "scripts": {
     "build": "node ../../build.ts --goos linux --goarch loong64"

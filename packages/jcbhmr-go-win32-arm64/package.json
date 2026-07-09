@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-win32-arm64",
-  "version": "1.26.5+1.26.5",
+  "version": "1.26.6+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -8,7 +8,17 @@
   "publishConfig": {
     "access": "public",
     "os": "win32",
-    "cpu": "arm64"
+    "cpu": "arm64",
+    "executableFiles": [
+      "./pkg/tool/windows_arm64/asm.exe",
+      "./pkg/tool/windows_arm64/cgo.exe",
+      "./pkg/tool/windows_arm64/compile.exe",
+      "./pkg/tool/windows_arm64/cover.exe",
+      "./pkg/tool/windows_arm64/fix.exe",
+      "./pkg/tool/windows_arm64/link.exe",
+      "./pkg/tool/windows_arm64/preprofile.exe",
+      "./pkg/tool/windows_arm64/vet.exe"
+    ]
   },
   "scripts": {
     "build": "node ../../build.ts --goos windows --goarch arm64"

@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-linux-arm",
-  "version": "1.26.5+1.26.5",
+  "version": "1.26.6+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -8,7 +8,17 @@
   "publishConfig": {
     "access": "public",
     "os": "linux",
-    "cpu": "arm"
+    "cpu": "arm",
+    "executableFiles": [
+      "./pkg/tool/linux_arm/asm",
+      "./pkg/tool/linux_arm/cgo",
+      "./pkg/tool/linux_arm/compile",
+      "./pkg/tool/linux_arm/cover",
+      "./pkg/tool/linux_arm/fix",
+      "./pkg/tool/linux_arm/link",
+      "./pkg/tool/linux_arm/preprofile",
+      "./pkg/tool/linux_arm/vet"
+    ]
   },
   "scripts": {
     "build": "node ../../build.ts --goos linux --goarch arm"

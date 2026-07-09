@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-linux-x64",
-  "version": "1.26.5+1.26.5",
+  "version": "1.26.6+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -8,7 +8,17 @@
   "publishConfig": {
     "access": "public",
     "os": "linux",
-    "cpu": "x64"
+    "cpu": "x64",
+    "executableFiles": [
+      "./pkg/tool/linux_amd64/asm",
+      "./pkg/tool/linux_amd64/cgo",
+      "./pkg/tool/linux_amd64/compile",
+      "./pkg/tool/linux_amd64/cover",
+      "./pkg/tool/linux_amd64/fix",
+      "./pkg/tool/linux_amd64/link",
+      "./pkg/tool/linux_amd64/preprofile",
+      "./pkg/tool/linux_amd64/vet"
+    ]
   },
   "scripts": {
     "build": "node ../../build.ts --goos linux --goarch amd64"

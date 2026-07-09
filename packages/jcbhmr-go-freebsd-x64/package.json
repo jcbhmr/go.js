@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-freebsd-x64",
-  "version": "1.26.5+1.26.5",
+  "version": "1.26.6+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -8,7 +8,17 @@
   "publishConfig": {
     "access": "public",
     "os": "freebsd",
-    "cpu": "x64"
+    "cpu": "x64",
+    "executableFiles": [
+      "./pkg/tool/freebsd_amd64/asm",
+      "./pkg/tool/freebsd_amd64/cgo",
+      "./pkg/tool/freebsd_amd64/compile",
+      "./pkg/tool/freebsd_amd64/cover",
+      "./pkg/tool/freebsd_amd64/fix",
+      "./pkg/tool/freebsd_amd64/link",
+      "./pkg/tool/freebsd_amd64/preprofile",
+      "./pkg/tool/freebsd_amd64/vet"
+    ]
   },
   "scripts": {
     "build": "node ../../build.ts --goos freebsd --goarch amd64"

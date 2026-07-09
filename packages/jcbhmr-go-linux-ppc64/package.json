@@ -1,6 +1,6 @@
 {
   "name": "@jcbhmr/go-linux-ppc64",
-  "version": "1.26.5+1.26.5",
+  "version": "1.26.6+1.26.5",
   "type": "module",
   "files": [
     "*"
@@ -8,7 +8,17 @@
   "publishConfig": {
     "access": "public",
     "os": "linux",
-    "cpu": "ppc64"
+    "cpu": "ppc64",
+    "executableFiles": [
+      "./pkg/tool/linux_ppc64le/asm",
+      "./pkg/tool/linux_ppc64le/cgo",
+      "./pkg/tool/linux_ppc64le/compile",
+      "./pkg/tool/linux_ppc64le/cover",
+      "./pkg/tool/linux_ppc64le/fix",
+      "./pkg/tool/linux_ppc64le/link",
+      "./pkg/tool/linux_ppc64le/preprofile",
+      "./pkg/tool/linux_ppc64le/vet"
+    ]
   },
   "scripts": {
     "build": "node ../../build.ts --goos linux --goarch ppc64le"
